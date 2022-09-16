@@ -9,11 +9,8 @@ ski_jumpers = ["Adam Małysz", "Janne Ahonen", "Sven Hannawald", "Noriaki Kasai"
 
 ski_jumps = {"Wielka Krokiew Zakopane": 1, "Oberstdorf": 2, "Insbruck": 3, "Lahti": 4}
 
-
 number_of_participants = int(input(f"Enter the number of ski jumpers who will take part in the competition. "
-                                    f"Remember that the minimum value is 4 and the maximum is {len(ski_jumpers)}: "))
-
-
+                                   f"Remember that the minimum value is 4 and the maximum is {len(ski_jumpers)}: "))
 
 while number_of_participants < 4 or number_of_participants > len(ski_jumpers):
     print(f"Keep in mind: the minimum number of ski jumpers is 4 and max {len(ski_jumpers)}")
@@ -22,7 +19,6 @@ while number_of_participants < 4 or number_of_participants > len(ski_jumpers):
 
 # randomly selecting participants. A number participants determined by the user
 tournament_participants = random.sample(ski_jumpers, number_of_participants)
-
 
 ski_jumps_chosen = int(input("Choose the hill where the competition will take place: "
                              "Wielka Krokiew Zakopane = 1, Oberstdorf = 2, Insbruck = 3, Lahti = 4: "))
@@ -44,6 +40,7 @@ def ski_jump_func(ski_jumps_chosen):
         return dimension_skijump
     else:
         print("Pick out jumps by entering a number within the specified range")
+
 
 # presentation of the list of ski jumpers participating in the competition
 
