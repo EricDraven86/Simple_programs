@@ -41,7 +41,6 @@ def ski_jump_func(ski_jumps_chosen):
     else:
         print("Pick out jumps by entering a number within the specified range")
 
-
 # presentation of the list of ski jumpers participating in the competition
 
 ski_jump_func(ski_jumps_chosen)
@@ -52,10 +51,8 @@ HC_range = ski_list_conv[1]
 
 print("Today's competition will be attended by: ", ', '.join(tournament_participants))
 
-
 # results generator. Wind force & additional or negative meters.
 # Then adding this to the random scores from the previously selected interval
-
 # random number of meters depending on the strength of the wind
 def wind_force2():
     wind = round(random.uniform(0.5, 3.5), 2)
@@ -78,14 +75,12 @@ def wind_force2():
 
 wind_list = []
 
-
 # number of wind figures depending of number of participants
 def wind_force():
     counter = 0
     while counter < len(tournament_participants):
         counter += 1
         wind_list.append(wind_force2())
-
 
 wind_force()
 results = random.sample(range(min_range, HC_range), len(tournament_participants))
