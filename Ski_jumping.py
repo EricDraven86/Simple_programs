@@ -23,6 +23,12 @@ tournament_participants = random.sample(ski_jumpers, number_of_participants)
 ski_jumps_chosen = int(input("Choose the hill where the competition will take place: "
                              "Wielka Krokiew Zakopane = 1, Oberstdorf = 2, Insbruck = 3, Lahti = 4: "))
 
+while ski_jumps_chosen > len(ski_jumps):
+    print (f"Choose one of the available ski jumps. The maximum number of ski jumps is {len(ski_jumps)}")
+    ski_jumps_chosen = int(input("Choose the hill where the competition will take place: "
+                                 "Wielka Krokiew Zakopane = 1, Oberstdorf = 2, Insbruck = 3, Lahti = 4: "))
+    pass
+
 
 # range of ski jump.
 def ski_jump_func(ski_jumps_chosen):
